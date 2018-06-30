@@ -1,0 +1,83 @@
+body {
+  width: 70%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  color: rgb(254, 157, 171);
+  font-weight: bold;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 45px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.gif-container {
+  width: 60%;
+}
+
+.new, .save {
+  padding: 15px 30px;
+  margin: 0 auto;
+  width: 60%;
+
+  font-weight: bold;
+  color: black;
+
+  border: 2px solid black;
+  border-radius: 20px;
+
+  background-color: rgb(254, 157, 171);
+
+  cursor: pointer;
+}
+
+.new {
+  background-color: lightblue;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 25%;
+  height: 200px;
+
+  padding: 20px;
+  border: 2px solid black;
+}
+
+.name {
+  width: 80%;
+  height: 20px;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  margin-bottom: 10px;
+}
+
+.controls-save {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.gif-container img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+}
