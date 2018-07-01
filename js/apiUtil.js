@@ -17,25 +17,29 @@ const ApiUtil = {
     xhr.send()
   },
 
-  saveGif: (e) => {
+  saveGif: (e, cb) => {
+    let parsedData
+
     const title = e.target
       .firstElementChild
       .value
 
-    const url = document.querySelector('.gif-image')
+    const url = document.querySelector('.gif-container img')
       .attributes
       .src
+      .value
 
+    if (title === '') alert("You must put a name in for this gif!")
+    
     const currentStorage = window.localStorage.getItem('data')
+
+    currentStorage
+      ? parsedData = JSON.parse(currentStorage)
+      : parsedData = {}
     
-    if (currentStorage) {
-      const parsedData = JSON.parse(currentStorage)
-      parsedData[title] = url
-    } else {
-      const parsedData = {title: url}
-    }
-    
+    parsedData[title] = url
     window.localStorage.setItem('data', JSON.stringify(parsedData))
+    cb()
   }
 }
 
